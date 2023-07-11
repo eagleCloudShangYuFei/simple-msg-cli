@@ -2,7 +2,7 @@
  // vim: set ft=javascript:
 
 const program = require('commander');
-console.log('111');
+
 program
   .version('1.5.0')
   .command('scan [path]', '扫描 React 项目')
