@@ -1,0 +1,26 @@
+{
+  "name": "simple-msg-cli",
+  "version": "1.0.0",
+  "description": "a simlpe tool for i18n",
+  "main": "index.js",
+  "bin": {
+    "eagle-pick": "bin/i18n-pick.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["i18n", "message"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eagleCloudShangYuFei/simple-msg-cli.git"
+  },
+  "author": "shangyf",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.22.8",
+    "@babel/preset-react": "^7.22.5",
+    "commander": "^11.0.0",
+    "glob": "^10.3.3",
+    "rimraf": "^5.0.1"
+  }
+}
