@@ -58,10 +58,11 @@ fs.writeFile(targetPath, JSON.stringify(result, null, '\t'), function(err) {
   console.log('----导出到 zh_CN.js ----')
 });
 
-translateRun(result).then(resultJson => {
-  
-  fs.writeFile(targetEnPath, JSON.stringify(resultJson, null, '\t'), (err) => {
-    if (err) return console.error(err);
-    console.log('----导出到 en_US.js ----')
-  });
-})
+if (config.autoTranslate) {
+  translateRun(result).then(resultJson => {
+    fs.writeFile(targetEnPath, JSON.stringify(resultJson, null, '\t'), (err) => {
+      if (err) return console.error(err);
+      console.log('----导出到 en_US.js ----')
+    });
+  })
+}

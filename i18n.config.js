@@ -2,9 +2,10 @@
 const _config = {
   "callStatement": "intl.formatMessage",
   "targetDir": "i18n-messages",
-  "exclude": [],
-  "callExpression": false,
+  "exclude": ['.umi', '.umi-production'],
+  "callExpression": true,
   "autoZhKey": true,
+  "autoTranslate": true,
 }
 const path = require('path');
 module.exports = function () {
