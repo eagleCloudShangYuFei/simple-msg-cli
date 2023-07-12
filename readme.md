@@ -7,8 +7,8 @@
 ```
 npm i simple-msg-cli -g 进行全区安装
 
-// 扫描
-eagle-pick scan [path] 扫描对应的path目录
+// 扫描对应的path目录 eagle-pick scan ./src
+eagle-pick scan [path]
 
 // 替换
 eagle-pick pick
