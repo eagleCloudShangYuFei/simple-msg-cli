@@ -1,6 +1,6 @@
 {
   "name": "simple-msg-cli",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "a simlpe tool for i18n",
   "main": "index.js",
   "bin": {
