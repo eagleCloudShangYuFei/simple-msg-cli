@@ -41,9 +41,9 @@ data.forEach(d=> {
   result[d.id] = d.defaultMessage
 });
 
+const resultJson = {}
 const translateRun = async (inputJson) => {
   const sourceKeyValues = Object.entries(inputJson)
-  const resultJson = {}
   for (let i = 0; i < sourceKeyValues.length; i++) {
     const [key, value] = sourceKeyValues[i]
     const { text } = await googleTranslator(value)
@@ -59,7 +59,13 @@ fs.writeFile(targetPath, JSON.stringify(result, null, '\t'), function(err) {
 });
 
 if (config.autoTranslate) {
-  translateRun(result).then(resultJson => {
+  translateRun(result).then(result => {
+    fs.writeFile(targetEnPath, JSON.stringify(result, null, '\t'), (err) => {
+      if (err) return console.error(err);
+      console.log('----导出到 en_US.js ----')
+    });
+  }).catch(e => {
+    console.log('----部分导出----');
     fs.writeFile(targetEnPath, JSON.stringify(resultJson, null, '\t'), (err) => {
       if (err) return console.error(err);
       console.log('----导出到 en_US.js ----')
