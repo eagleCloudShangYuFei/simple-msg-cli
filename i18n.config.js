@@ -5,7 +5,7 @@ const _config = {
   "exclude": ['.umi', '.umi-production'],
   "callExpression": true,
   "autoZhKey": true,
-  "autoTranslate": true,
+  "autoTranslate": false,
 }
 const path = require('path');
 module.exports = function () {
