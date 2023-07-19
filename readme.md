@@ -8,6 +8,7 @@
 npm i simple-msg-cli -g 进行全区安装
 
 // 扫描对应的path目录 eagle-pick scan ./src
+// [path]支持 "," 分割多个路径
 eagle-pick scan [path]
 
 // 替换
