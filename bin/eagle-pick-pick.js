@@ -51,22 +51,22 @@ function generateAndWrite(sourceObj) {
         arr[line - 1] = replace(arr[line - 1], `'${chinese}'`, replaceString);
         if (temp1 === arr[line - 1]) {
             arr[line - 1] = replace(arr[line - 1], chinese, replaceString);
-            if (temp1 === arr[line - 1]) {
-                arr[line] = replace(arr[line], `"${chinese}"`, replaceString);
-                // if (temp2 === arr[line]) {
-                //     arr[line] = replace(arr[line], `'${chinese}'`, replaceString);
-                //     if (temp2 === arr[line]) {
-                //         arr[line] = replace(arr[line], chinese, replaceString);
-                //         if (temp2 === arr[line]) {
-                //             if (arr[line].indexOf(text) !== -1 ||
-                //                 arr[line - 1].indexOf(text) !== -1) {
-                //                 console.log('失败，请手动替换', JSON.stringify(sourceObj, null, "\t"));
-                //                 return 0;
-                //             }
-                //         }
-                //     }
-                // }
-            }
+            // if (temp1 === arr[line - 1]) {
+            //     arr[line] = replace(arr[line], `"${chinese}"`, replaceString);
+            //     if (temp2 === arr[line]) {
+            //         arr[line] = replace(arr[line], `'${chinese}'`, replaceString);
+            //         if (temp2 === arr[line]) {
+            //             arr[line] = replace(arr[line], chinese, replaceString);
+            //             if (temp2 === arr[line]) {
+            //                 if (arr[line].indexOf(text) !== -1 ||
+            //                     arr[line - 1].indexOf(text) !== -1) {
+            //                     console.log('失败，请手动替换', JSON.stringify(sourceObj, null, "\t"));
+            //                     return 0;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
         }
     }
 
